@@ -11,7 +11,16 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        var tv_app_name = findViewById<TextView>(R.id.tv_app_name)
 
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+
+        val typeface: Typeface =
+            Typeface.createFromAsset(assets, "carbon bl.ttf")
+        tv_app_name.typeface = typeface
 
     }
 }
